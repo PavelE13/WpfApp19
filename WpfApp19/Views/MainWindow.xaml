@@ -1,0 +1,18 @@
+﻿<Window x:Class="WpfApp19.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp19"
+        xmlns:vm="clr-namespace:WpfApp19.ViewModels"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="450">
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
+    <StackPanel>
+        <TextBox Height="40" Text="{Binding Path=Pole1}"/>
+        <Button Content="Рассчитать R" Margin="10" Background="#FFA7E286" Command="{Binding Path=CalcCommand}" />
+        <TextBox Height="40" Text="{Binding Path=Pole2}"/>
+    </StackPanel>
+</Window>
